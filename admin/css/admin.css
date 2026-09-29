@@ -1,0 +1,327 @@
+/* ========================================
+   KHODIYAR COMPUTER - Admin Panel Styles
+   ======================================== */
+
+:root {
+    --sidebar-width: 260px;
+    --topbar-height: 60px;
+    --primary: #6C3CE1;
+    --primary-dark: #5A2DB8;
+    --dark: #1a1a2e;
+    --sidebar-bg: #0F0C29;
+    --sidebar-hover: #1A1640;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f6f9;
+    overflow-x: hidden;
+}
+
+/* --- Topbar --- */
+.admin-topbar {
+    background: linear-gradient(135deg, #0F0C29 0%, #302B63 50%, #24243E 100%);
+    padding: 10px 20px;
+    height: var(--topbar-height);
+    z-index: 1030;
+}
+
+.admin-topbar .navbar-brand {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+/* --- Sidebar --- */
+.admin-sidebar {
+    position: fixed;
+    top: var(--topbar-height);
+    left: 0;
+    width: var(--sidebar-width);
+    height: calc(100vh - var(--topbar-height));
+    background: var(--sidebar-bg);
+    color: #fff;
+    overflow-y: auto;
+    z-index: 1020;
+    transition: all 0.3s ease;
+}
+
+.sidebar-header {
+    padding: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.sidebar-header h5 {
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.sidebar-nav {
+    list-style: none;
+    padding: 15px 0;
+}
+
+.sidebar-nav .nav-item {
+    padding: 0 10px;
+}
+
+.sidebar-nav .nav-link {
+    color: rgba(255,255,255,0.7);
+    padding: 12px 15px;
+    border-radius: 8px;
+    display: block;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.sidebar-nav .nav-link i {
+    width: 22px;
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+.sidebar-nav .nav-link:hover {
+    background: var(--sidebar-hover);
+    color: #fff;
+}
+
+.sidebar-nav .nav-link.active {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(108, 60, 225, 0.3);
+}
+
+/* --- Main Content --- */
+.admin-main {
+    margin-left: var(--sidebar-width);
+    margin-top: var(--topbar-height);
+    padding: 25px;
+    min-height: calc(100vh - var(--topbar-height));
+}
+
+/* --- Page Header --- */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.page-header h4 {
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+}
+
+/* --- Stats Cards --- */
+.stat-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.stat-card .stat-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.stat-card h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.stat-card p {
+    color: #6c757d;
+    margin-bottom: 0;
+    font-size: 0.9rem;
+}
+
+/* --- Content Cards --- */
+.content-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.content-card .card-header-custom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.content-card .card-header-custom h5 {
+    font-weight: 600;
+    margin: 0;
+}
+
+/* --- Tables --- */
+.table th {
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #6c757d;
+    border-top: none;
+}
+
+.table td {
+    vertical-align: middle;
+    font-size: 0.9rem;
+}
+
+.table-actions .btn {
+    padding: 4px 10px;
+    font-size: 0.8rem;
+}
+
+/* --- Forms --- */
+.form-control, .form-select {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 2px solid #e9ecef;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 0.2rem rgba(108, 60, 225, 0.15);
+}
+
+.form-label {
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+}
+
+/* --- Buttons --- */
+.btn {
+    padding: 8px 20px;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn-primary-gradient {
+    background: linear-gradient(135deg, #6C3CE1, #5A2DB8);
+    color: #fff;
+    border: none;
+}
+
+.btn-primary-gradient:hover {
+    background: linear-gradient(135deg, #5A2DB8, #4A2598);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(108, 60, 225, 0.3);
+}
+
+/* --- Status Badges --- */
+.badge {
+    padding: 6px 12px;
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+/* --- Modal --- */
+.modal-content {
+    border-radius: 12px;
+    border: none;
+}
+
+.modal-header {
+    border-bottom: 1px solid #eee;
+    padding: 20px 25px;
+}
+
+.modal-body {
+    padding: 25px;
+}
+
+.modal-footer {
+    border-top: 1px solid #eee;
+    padding: 15px 25px;
+}
+
+/* --- Empty State --- */
+.empty-state {
+    text-align: center;
+    padding: 40px;
+}
+
+.empty-state i {
+    font-size: 3rem;
+    color: #dee2e6;
+    margin-bottom: 15px;
+}
+
+.empty-state p {
+    color: #6c757d;
+    margin-bottom: 0;
+}
+
+/* --- Responsive --- */
+@media (max-width: 991.98px) {
+    .admin-sidebar {
+        transform: translateX(-100%);
+    }
+    
+    .admin-sidebar.show {
+        transform: translateX(0);
+    }
+    
+    .admin-main {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .admin-main {
+        padding: 15px;
+    }
+    
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .stat-card {
+        padding: 20px;
+    }
+    
+    .stat-card h3 {
+        font-size: 1.5rem;
+    }
+}
